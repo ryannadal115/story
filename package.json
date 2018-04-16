@@ -32,6 +32,7 @@
     "@storybook/addon-links": "^3.3.12",
     "@storybook/react": "^3.3.12",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",

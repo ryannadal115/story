@@ -1,0 +1,43 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "plugins": ["jsx-a11y", "import"],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true,
+    "serviceworker": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-named-as-default": 0, // Testing with connected components is simpler
+    "no-shadow": "off", // https://stackoverflow.com/questions/37682705/
+    "react/forbid-prop-types": ["error", { "forbid": ["any", "array"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/.storybook/**", "src/stories/**"] }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight", "to"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ]
+  }
+}
