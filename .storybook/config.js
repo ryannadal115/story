@@ -25,6 +25,8 @@ addDecorator(WrapperRouter);
 function loadStories() {
     require('../src/stories/ButtonwithCheckbox');
     require('../src/stories/MenuFeature');
+    require('../src/stories/TextField');
+                       
 }
 
 configure(loadStories, module);
