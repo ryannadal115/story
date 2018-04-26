@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Tabs, { Tab } from '../components/Tabs/Tabs';
+import Tabs, { Tab } from '../components/Tabs';
 import Icon from '../components/Icon';
 
 storiesOf('Tabs', module)
