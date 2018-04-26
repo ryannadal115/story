@@ -62,9 +62,6 @@ const styles = theme => ({
   icon: {
     cursor: 'pointer',
     fill: theme.palette.accent.main,
-    width: '1em',
-    height: '1em',
-    fontSize: '24px',
     display: 'inline-block',
     userSelect: 'none',
     verticalAlign: 'baseline',
