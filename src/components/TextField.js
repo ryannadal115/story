@@ -22,7 +22,6 @@ const styles = theme => ({
       border: `1px solid ${theme.palette.primary.main}`,
     },
     '&:disabled': {
-      color: theme.palette.ambient.basePlus75,
       border: `1px solid ${theme.palette.ambient.basePlus90}`,
     },
   },
@@ -36,6 +35,7 @@ const styles = theme => ({
     userSelect: 'none',
     fontSize: '14px',
     fontWeight: '200',
+    transition: 'width .5s ease-out, height .5s ease-out',
     color: 'black',
     backgroundColor: 'white',
     '&-ms-::placeholder, &-webkit-::placeholder, &::placeholder': {
@@ -44,15 +44,14 @@ const styles = theme => ({
       backgroundColor: 'white',
     },
     '& + svg': {
-      color:theme.palette.primary.main,
-      fill: 'currentColor',
+      fill: theme.palette.primary.main,
       cursor: 'text',
       position: 'absolute',
       top: '50%',
       right: '15px',
       transform: 'translateY(-50%)',
     },
-    '&:focus::-webkit-input-placeholder': {
+    '&:focus::placeholder': {
       outline: 'none',
       color: theme.palette.primary.main,
     },
@@ -65,17 +64,14 @@ const styles = theme => ({
       color: theme.palette.primary.main,
     },
   },
-  // icon: {
-  //   fill: 'currentColor',
-  // },
+  icon: {
+    fill: 'currentColor',
+  },
   disabled: {
-    opacity: 0.5,
+    opacity: 0.65,
     cursor: 'not-allowed',
     '&:hover ': {
       border: `1px solid white`,
-    },
-    '& + svg':  {
-      fill: theme.palette.ambient.basePlus75,
     },
   },
 });
