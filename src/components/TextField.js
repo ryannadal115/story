@@ -2,7 +2,7 @@ import * as React from 'react';
 import { withStyles } from 'material-ui';
 
 import Icon from './Icon';
-import classNames from '../utils/classNames';
+import classNames from './classNames';
 
 type Props = {
   placeholder: string,
