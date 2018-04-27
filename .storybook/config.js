@@ -26,7 +26,7 @@ function loadStories() {
     require('../src/stories/ButtonwithCheckbox');
     require('../src/stories/MenuFeature');
     require('../src/stories/TextField');
-                       
+    require('../src/stories/Tabs');
 }
 
 configure(loadStories, module);
