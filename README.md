@@ -1,5 +1,5 @@
 
-npm install
+yarn install
 ```
 
 Run the storybook:
