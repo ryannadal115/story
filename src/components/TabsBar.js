@@ -26,46 +26,41 @@ const styles = theme => ({
 class TabsBar extends React.Component<Props, State> {
   constructor(props) {
     super(props);
-    this.state = {
-      activeTab: 0,
-    };
-    this.handleSelect = this.handleSelect.bind(this);
+    this.state = {active: 'Monitor'};
   }
 
-  handleSelect(selectedTab) {
-    this.setState({
-      activeTab: selectedTab,
-    });
-  }
+  handleChange = active => this.setState({active});
+
   render() {
     const { classes } = this.props;
+    const content = {
+      Monitor: 'Tab A',
+      Configuration: 'Tab B',
+      EquipmentInfo: 'Tab C',
+      };
 
-    return (
-      <div className={classes.root}>
-        <Tabs
-          className={classes.tabs}
-          activeKey={this.state.activeTab}
-          onSelect={this.handleSelect}
-        >
-          <Tab activeKey={0} label="Monitor" icon={<Icon icon="monitor" />} />
-          <Tab
-            activeKey={1}
-            label="Configuration"
-            icon={<Icon icon="configuration" />}
-          />
-          <Tab
-            activeKey={2}
-            label="EquipmentInfo"
-            icon={<Icon icon="equipmentInfo" />}
-          />
-          <Tab
-            activeKey={3}
-            label="Maintenance"
-            icon={<Icon icon="maintenance" />}
-          />
-        </Tabs>
-      </div>
-    );
+      return(
+        <div className={classes.root}>
+            <Tabs
+              active={this.state.active}
+              onChange={this.handleChange}
+            >
+              <Tab
+                label="Monitor"
+                icon={<Icon icon="monitor" />}
+              />
+              <Tab
+                label="Configuration"
+                icon={<Icon icon="configuration" />}
+              />
+              <Tab
+                label="EquipmentInfo"
+                icon={<Icon icon="equipmentInfo" />}
+              />
+              </Tabs>
+            <p>{content[this.state.active]}</p>
+          </div>
+      );
   }
 }
 

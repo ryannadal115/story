@@ -70,17 +70,36 @@ const tabsStyles = () => ({
   },
 });
 
-const Tabs = ({ children, classes }) => (
-  <div role="tablist" className={classes.root}>
-    {children}
-  </div>
-);
+class Tabs extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    return(
+      <div className={classes.root}>
+        {React.Children.map(this.props.children, (child) => {
+
+            return (
+              <div
+                onClick={() => {this.props.onChange(child.label)}}
+              >
+                {child}
+              </div>
+            );
+        })}
+      </div>
+     )
+  }
+}
 
 Tabs.defaultProps = {};
 
 Tabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
+  classes: PropTypes.object,
+  children: PropTypes.node,
 };
 
 export { TabWithStyles as Tab, BasicTab };

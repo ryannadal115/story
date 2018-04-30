@@ -44,7 +44,7 @@ const styles = theme => ({
       backgroundColor: 'white',
     },
     '& + svg': {
-      fill: theme.palette.primary.main,
+      fill: '#fff',
       cursor: 'text',
       position: 'absolute',
       top: '50%',
