@@ -1,7 +1,6 @@
 
 yarn install
 ```
-
 Run the storybook:
 
 ```
